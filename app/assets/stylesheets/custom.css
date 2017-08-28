@@ -1,0 +1,17 @@
+.custom_wrapper{
+	padding: 0px 15px;
+}
+.custom_wrapper table {
+	max-width: 100%;
+}
+.table-header{
+	background: #AEBFD0;
+	text-transform: uppercase;
+}
+.main-header{
+	background: #DDE4EB;
+}
+
+.custom-top-bar{
+	background: #232A37 !important;
+}

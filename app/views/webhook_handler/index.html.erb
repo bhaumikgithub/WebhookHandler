@@ -1,29 +1,37 @@
-<table>
-  <caption>Purchase Order</caption>
-  <thead>
-    <tr>
-      <th>#</th>
-      <th>Date</th>
-      <th>Supplier Name</th>
-      <th>Department Name</th>
-      <th>Gross Amount</th>
-      <th>Status</th>
-      <th>PO Number</th>
-      <th>Net Amount</th>
-    </tr>
-  </thead>
-  <tbody>
-  <% @purchase_order.each_with_index do |v,i| %>
-    <tr>
-      <th><%= i+1 %></th>
-      <th><%= v.created_at.strftime("%Y-%m-%d") %></th>
-      <th><%= v.supplier_name %></th>
-      <th><%= v.department_name %></th>
-      <th><%= v.total_gross_amount %></th>
-      <th><%= v.status %></th>
-      <th><%= v.approval_key %></th>
-      <th><%= v.total_net_amount %></th>
-    </tr>
-  <% end %>
-  </tbody>
-</table>
+<div class="grid-x main-header">
+  <div class="custom_wrapper">
+    <h3>Purchase Order</h3>
+  </div>
+</div>
+<div class="grid-x">
+  <div class="custom_wrapper">
+    <table class="large-12 responsive">
+      <thead class="table-header">
+        <tr>
+          <th>#</th>
+          <th>Date</th>
+          <th>Supplier Name</th>
+          <th>Department Name</th>
+          <th>Gross Amount</th>
+          <th>Status</th>
+          <th>PO Number</th>
+          <th>Net Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+      <% @purchase_order.each_with_index do |v,i| %>
+        <tr>
+          <th><%= i+1 %></th>
+          <th><%= v.created_at.strftime("%Y-%m-%d") %></th>
+          <th><%= v.supplier_name %></th>
+          <th><%= v.department_name %></th>
+          <th><%= v.total_gross_amount %></th>
+          <th><%= v.status %></th>
+          <th><%= v.approval_key %></th>
+          <th><%= v.total_net_amount %></th>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
